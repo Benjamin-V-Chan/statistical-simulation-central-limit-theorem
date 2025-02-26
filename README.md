@@ -1,5 +1,33 @@
 # statistical-simulation-central-limit-theorem
 
+## Project Overview
+
+The Central Limit Theorem (CLT) states that the distribution of the sample mean of a sufficiently large number of independent and identically distributed (i.i.d.) random variables approaches a normal distribution, regardless of the original population distribution.
+
+Mathematically, let $\( X_1, X_2, ..., X_n \)$ be a random sample of size $\( n \)$ drawn from a population with mean $\( \mu \)$ and variance $\( \sigma^2 \)$. The sample mean is defined as:
+
+$$\bar{X} = \frac{1}{n} \sum_{i=1}^{n} X_i$$
+
+According to the CLT, as \( n \to \infty \), the standardized sample mean follows a standard normal distribution:
+
+$$Z = \frac{\bar{X} - \mu}{\sigma / \sqrt{n}} \sim N(0,1)$$
+
+### Proof Outline
+
+#### Step 1: Expectation and Variance of the Sample Mean
+Using the properties of expectation and variance:
+
+$$E[\bar{X}] = E\left[\frac{1}{n} \sum_{i=1}^{n} X_i \right] = \frac{1}{n} \sum_{i=1}^{n} E[X_i] = \mu$$
+
+$$Var(\bar{X}) = Var\left( \frac{1}{n} \sum_{i=1}^{n} X_i \right) = \frac{1}{n^2} \sum_{i=1}^{n} Var(X_i) = \frac{\sigma^2}{n}$$
+
+#### Step 2: Convergence to Normal Distribution
+By the Lyapunov or Lindeberg condition, the sum of i.i.d. random variables properly standardized converges in distribution to the standard normal distribution:
+
+$$\frac{\sum_{i=1}^{n} (X_i - \mu)}{\sigma \sqrt{n}} \to N(0,1) \text{ as } n \to \infty$$
+
+This is the foundation of the CLT and underlies statistical inference methods, such as confidence intervals and hypothesis testing.
+
 ## Folder Structure
 
 ```
