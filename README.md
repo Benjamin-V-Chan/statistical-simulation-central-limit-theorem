@@ -14,19 +14,17 @@ $$Z = \frac{\bar{X} - \mu}{\sigma / \sqrt{n}} \sim N(0,1)$$
 
 ### Proof Outline
 
-#### Step 1: Expectation and Variance of the Sample Mean
+#### Expectation and Variance of the Sample Mean
 Using the properties of expectation and variance:
 
 $$E[\bar{X}] = E\left[\frac{1}{n} \sum_{i=1}^{n} X_i \right] = \frac{1}{n} \sum_{i=1}^{n} E[X_i] = \mu$$
 
 $$Var(\bar{X}) = Var\left( \frac{1}{n} \sum_{i=1}^{n} X_i \right) = \frac{1}{n^2} \sum_{i=1}^{n} Var(X_i) = \frac{\sigma^2}{n}$$
 
-#### Step 2: Convergence to Normal Distribution
+#### Convergence to Normal Distribution
 By the Lyapunov or Lindeberg condition, the sum of i.i.d. random variables properly standardized converges in distribution to the standard normal distribution:
 
 $$\frac{\sum_{i=1}^{n} (X_i - \mu)}{\sigma \sqrt{n}} \to N(0,1) \text{ as } n \to \infty$$
-
-This is the foundation of the CLT and underlies statistical inference methods, such as confidence intervals and hypothesis testing.
 
 ## Folder Structure
 
@@ -103,5 +101,3 @@ All dependencies can be installed using:
 ```sh
 pip install -r requirements.txt
 ```
-
-This project provides an in-depth simulation of the Central Limit Theorem by illustrating how sample means converge to a normal distribution through statistical visualization and hypothesis testing.
